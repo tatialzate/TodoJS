@@ -1,11 +1,10 @@
 import './styles.css';
 
-import { Todo, TodoList } from './classes'
+import { TodoList } from './classes'
 import { createTodoHtml } from './js/components';
 
 export const taskList = new TodoList();
-const task = new Todo("Learning javascript");
-taskList.newTask( task );
-createTodoHtml(task);
 
+taskList.tasksList.forEach( todo  => createTodoHtml(todo));
+//taskList.tasksList.forEach( createTodoHtml );
 console.log(taskList);
